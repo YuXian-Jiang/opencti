@@ -448,7 +448,7 @@ const Settings = () => {
                               <MenuItem value="fr-fr">Français</MenuItem>
                               <MenuItem value="es-es">Español</MenuItem>
                               <MenuItem value="ja-jp">日本語</MenuItem>
-                              <MenuItem value="zh-cn">简化字</MenuItem>
+                              <MenuItem value="zh-tw">繁體中文</MenuItem>
                             </Field>
                             <HiddenTypesList />
                             <div style={{ marginTop: 20 }}>

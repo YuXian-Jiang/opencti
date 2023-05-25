@@ -1,0 +1,9 @@
+---
+opencti:
+  url: 'http://localhost:8080'
+  token: 'fa5403d5-1e5a-4a8d-9c74-7f33b640bff9'
+  json_logging: false
+
+worker:
+  log_level: 'info'
+  telemetry_enabled: false

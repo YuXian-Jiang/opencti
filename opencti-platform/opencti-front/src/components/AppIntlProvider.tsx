@@ -4,7 +4,7 @@ import frLocale from 'date-fns/locale/fr';
 import esLocale from 'date-fns/locale/es';
 import enLocale from 'date-fns/locale/en-US';
 import jaLocale from 'date-fns/locale/ja';
-import cnLocale from 'date-fns/locale/zh-CN';
+import twLocale from 'date-fns/locale/zh-TW';
 import moment from 'moment';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -19,7 +19,7 @@ const localeMap = {
   'fr-fr': frLocale,
   'es-es': esLocale,
   'ja-jp': jaLocale,
-  'zh-cn': cnLocale,
+  'zh-tw': twLocale,
 };
 
 interface AppIntlProviderProps {
@@ -38,7 +38,7 @@ const AppIntlProvider: FunctionComponent<AppIntlProviderProps> = ({ settings, ch
     && me.language !== undefined
     && me.language !== 'auto'
     ? me.language
-    : platformLang) as ('es-es' | 'fr-fr' | 'ja-jp' | 'zh-cn' | 'en-us');
+    : platformLang) as ('es-es' | 'fr-fr' | 'ja-jp' | 'zh-tw' | 'en-us');
   const baseMessages = i18n.messages[lang] || i18n.messages[DEFAULT_LANG];
   if (lang === 'fr-fr') {
     moment.locale('fr-fr');
@@ -46,8 +46,8 @@ const AppIntlProvider: FunctionComponent<AppIntlProviderProps> = ({ settings, ch
     moment.locale('es-es');
   } else if (lang === 'ja-jp') {
     moment.locale('ja-jp');
-  } else if (lang === 'zh-cn') {
-    moment.locale('zh-cn');
+  } else if (lang === 'zh-tw') {
+    moment.locale('zh-tw');
   } else {
     moment.locale('en-us');
   }

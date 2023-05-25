@@ -70,7 +70,8 @@ const AppThemeProvider: FunctionComponent<AppThemeProviderProps> = ({
   settings,
 }) => {
   const { me } = useContext<UserContextType>(UserContext);
-  const platformTitle = settings?.platform_title ?? 'OpenCTI - Cyber Threat Intelligence Platform';
+  // const platformTitle = settings?.platform_title ?? 'OpenCTI - Cyber Threat Intelligence Platform';
+  const platformTitle = settings?.platform_title ?? 'Anti-Fraud Shield - Scam Threat Intelligence Platform';
   useDocumentModifier(platformTitle);
   useDocumentFaviconModifier(settings?.platform_favicon);
   // region theming
