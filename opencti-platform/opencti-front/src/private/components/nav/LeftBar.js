@@ -17,6 +17,7 @@ import {
   ConstructionOutlined,
   DashboardOutlined,
   LayersOutlined,
+  TrackChangesOutlined,
 } from '@mui/icons-material';
 import {
   Binoculars,
@@ -198,6 +199,25 @@ const LeftBar = () => {
       <Divider />
       <Security needs={[KNOWLEDGE]}>
         <MenuList component="nav">
+        <StyledTooltip title={!navOpen && t('FIMI')} placement="right">
+            <MenuItem
+              component={Link}
+              to="/dashboard/fimi"
+              selected={location.pathname.includes('/dashboard/fimi')}
+              dense={true}
+              classes={{ root: classes.menuItem }}
+            >
+              <ListItemIcon style={{ minWidth: 20 }}>
+                <TrackChangesOutlined />
+              </ListItemIcon>
+              {navOpen && (
+                <ListItemText
+                  classes={{ primary: classes.menuItemText }}
+                  primary={t('FIMI')}
+                />
+              )}
+            </MenuItem>
+          </StyledTooltip>
           <StyledTooltip title={!navOpen && t('Analysis')} placement="right">
             <MenuItem
               component={Link}

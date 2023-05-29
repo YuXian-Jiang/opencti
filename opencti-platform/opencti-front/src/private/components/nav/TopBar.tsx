@@ -93,6 +93,7 @@ import {
 } from './__generated__/TopBarNotificationNumberSubscription.graphql';
 import TopMenuCaseRfi from './TopMenuCaseRfi';
 import TopMenuCaseRft from './TopMenuCaseRft';
+import TopMenuFimi from './TopMenuFimi';
 
 const useStyles = makeStyles<Theme>((theme) => ({
   appBar: {
@@ -451,6 +452,12 @@ const TopBar: FunctionComponent<TopBarProps> = ({
             '/dashboard/workspaces/investigations',
           ) && <TopMenuWorkspacesInvestigations />}
           {location.pathname === '/dashboard/profile' ? <TopMenuProfile /> : ''}
+          {/* FIMI TopBar */}
+          {(location.pathname === '/dashboard/fimi'
+            || location.pathname.match('/dashboard/fimi/[a-z_]+$')) && (
+            <TopMenuFimi />
+          )}
+
         </div>
         <div className={classes.barRight}>
           <Security needs={[KNOWLEDGE]}>

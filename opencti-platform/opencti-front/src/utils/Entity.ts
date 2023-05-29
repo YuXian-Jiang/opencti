@@ -72,6 +72,22 @@ export const resolveLink = (type: string): string | null => {
       return '/dashboard/cases/rfis';
     case 'Case-Rft':
       return '/dashboard/cases/rfts';
+    case 'Fimi-Incident':
+      return '/dashboard/fimi/incidents';
+    case 'Fimi-Threat-Actor':
+      return '/dashboard/fimi/threat_actors';
+    case 'Fimi-Attack-Pattern':
+      return '/dashboard/fimi/attack_patterns';
+    case 'Fimi-Course-Of-Action':
+      return '/dashboard/fimi/courses_of_action';
+    case 'Fimi-Vulnerability':
+      return '/dashboard/fimi/vulnerabilities';
+    case 'Fimi-Channel':
+      return '/dashboard/fimi/channels';
+    case 'Fimi-Event':
+      return '/dashboard/fimi/events';
+    case 'Fimi-Narrative':
+      return '/dashboard/fimi/narratives';
     case 'User':
     case 'Creator':
     case 'Assignee':
